@@ -7,15 +7,14 @@ Kavi Jivan
 
 ---
 # General Tips
-
 - Give up some layout control
-    - Use minimal controls like directions/line lengths to layout
-    - Trust the tool to group
     - Not going to be perfect
+    - Trust the tool to group
     - Revisit layout near the end
-- Use a live preview while creating the diagram
-- Browse the diagrams and see what fits best first
-- Try to find the right level of detail on the diagram
+    - Use minimal controls like directions/line lengths to layout
+- Use a live preview while working on diagrams
+- Browse the types of diagrams and see what fits best first
+- Try to keep your diagrams minimal
 
 ---
 # Plant UML
@@ -30,38 +29,19 @@ Home - https://plantuml.com/
         - `java -jar plantuml*.jar diagram.txt`
 
 ---
-# Plant UML Example
-```
-@startuml
-Alice -> Bob: Authentication Request
-Bob --> Alice: Authentication Response
-
-Alice -> Bob: Another authentication Request
-Alice <-- Bob: Another authentication Response
-@enduml
-```
-
----
 # Plant UML Tips
-```
-@startuml
-left to right direction
-!theme plain
-skinparam componentStyle rectangle
-title Some Diagram
-
-    'A
-    [A]-->[B]
-    [A]-->[C]
-
-    'B
-    [B]-->[D]
-
-    'C
-    [C]-->[D]
-
-@enduml
-```
+- Need `@startuml` and `@enduml` before vscode preview works
+- Remember to set direction
+    - `left to right direction`
+- Use plain theme for black and white
+    - `!theme plain`
+- Skin components to simple rectangles
+    - `skinparam componentStyle rectangle`
+- Give your diagram a title
+    - `title Awesome Diagram`
+- Group statements in diagram
+    - Comments - `'Employees`
+- Use arrows in one direction
 
 ---
 # Mermaid
@@ -79,11 +59,10 @@ Home - https://mermaid-js.github.io/mermaid/#/
         - `mmdc -i input.mmd -o output.svg`
 
 ---
-# Mermaid Example
-```
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-```
+# Mermaid Tips
+- Use `flowchart` instead of `graph`
+    - Subgraphs direction doesn't work with flowcharts
+- Group statements in diagram
+    - Comments - `%% Employees`
+- Select desired theme
+    - `%%{init: {'theme':'base'}}%%`

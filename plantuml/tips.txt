@@ -1,0 +1,16 @@
+@startuml
+left to right direction
+!theme plain
+skinparam componentStyle rectangle
+title Awesome Diagram
+
+    'A
+    [A]-->[B]
+    [A]-->[C]
+
+    'B
+    [B]-->[D]
+
+    'C
+    [C]-->[D]
+@enduml
